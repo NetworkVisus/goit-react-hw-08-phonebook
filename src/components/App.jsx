@@ -33,9 +33,9 @@ export const App = () => {
         <Route
           path="/contacts"
           element={
-            <PublicRoutes>
+            <PrivateRoutes>
               <ContactsPage />
-            </PublicRoutes>
+            </PrivateRoutes>
           }
         />
       </Routes>
