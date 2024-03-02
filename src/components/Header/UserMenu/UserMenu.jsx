@@ -13,15 +13,13 @@ export default function UserMenu() {
     dispatch(logout());
   };
 
-  const { email } = useSelector(userSelector);
+  const { email, name } = useSelector(userSelector);
 
   return (
     <Styled.Div>
       <Styled.WelcomeText>
-        Hello!
-        {email
-          ? ` Your email is ${email}`
-          : ' Stranger, there is no truth in foots!'}
+        Hello,
+        {email ? ` ${name}!` : ' stranger, there is no truth in foots!'}
       </Styled.WelcomeText>
       <Styled.Button type="button" onClick={handleClick}>
         Log out

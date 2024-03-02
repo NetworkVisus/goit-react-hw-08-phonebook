@@ -16,14 +16,20 @@ export const Form = () => {
     });
     let numberTmp = event.currentTarget.elements.number.value;
     numberTmp = numberPretty(numberTmp);
-    if (
-      contactsState.some(
-        contact => contact.name.toLowerCase() === nameTmp.toLowerCase().trim()
-      )
-    ) {
-      alert(`Oops, seems like ${nameTmp} is already in contacts list`);
-      return;
+    if (Array.isArray(contactsState)) {
+      if (contactsState) {
+        if (
+          contactsState.find(
+            contact =>
+              contact.name.toLowerCase() === nameTmp.toLowerCase().trim()
+          )
+        ) {
+          alert(`Oops, seems like ${nameTmp} is already in contacts list`);
+          return;
+        }
+      }
     }
+
     const newContact = {
       name: nameTmp.trim(),
       number: numberTmp,

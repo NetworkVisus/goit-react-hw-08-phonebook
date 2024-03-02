@@ -12,6 +12,7 @@ export const Div = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 `;
 export const WelcomeText = styled.p``;
 export const Button = styled.button`

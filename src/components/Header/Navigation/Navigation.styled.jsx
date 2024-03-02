@@ -9,7 +9,11 @@ import {
   WHITE_SECONDARY_COLOR,
 } from 'constants/constants';
 
-export const Nav = styled.nav``;
+export const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`;
 export const StyledNavLink = styled(NavLink)`
   color: ${WHITE_PRIMARY_COLOR};
   background-color: ${GREY_PRIMARY_COLOR};

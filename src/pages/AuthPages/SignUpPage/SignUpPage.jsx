@@ -23,6 +23,10 @@ function SignUpPage() {
       <Styled.WelcomeTitle>You can signup here!</Styled.WelcomeTitle>
       <Styled.Form onSubmit={handleSubmit}>
         <Styled.InputDiv>
+          <Styled.Label htmlFor="nameInput">Name</Styled.Label>
+          <Styled.Input name="name" type="name" id="nameInout" required />
+        </Styled.InputDiv>
+        <Styled.InputDiv>
           <Styled.Label htmlFor="emailInput">Your email address</Styled.Label>
           <Styled.Input type="email" name="email" id="emailInput" required />
         </Styled.InputDiv>

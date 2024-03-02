@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { refresh } from '../../redux/auth/authOperations';
 import { getContacts } from '../../redux/contacts/operations';
 import * as Styled from './ContactsPage.styled';
+import Header from 'components/Header/Header';
 
 function ContactsPage() {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ function ContactsPage() {
 
   return (
     <>
-      <Styled.NavLinkStyled to="/"> {'Back to Home'}</Styled.NavLinkStyled>
+      <Header />
 
       <Styled.NewContactTitle>Add new contact:</Styled.NewContactTitle>
       <Form />
